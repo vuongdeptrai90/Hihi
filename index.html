@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Troll</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+}
+
+button{
+    padding:20px 40px;
+    font-size:25px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    background:#00eaff;
+}
+
+video{
+    display:none;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="troll()">Đừng Bấm Vào 💀</button>
+
+<video id="video" controls>
+    <source src="troll.mp4" type="video/mp4">
+</video>
+
+<script>
+function troll(){
+
+    let btn=document.querySelector("button");
+    let video=document.getElementById("video");
+
+    btn.style.display="none";
+    video.style.display="block";
+
+    video.play();
+}
+</script>
+
+</body>
+</html>
