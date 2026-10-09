@@ -1944,7 +1944,7 @@ local function humApply(label, F)
 end
 
 addToggle(pMove, "⚡", "Speed (chạy nhanh)", "speedOn", humApply("Speed", SpeedF))
-addStepper(pMove, "Tốc độ chạy", "speedVal", 16, 150, 4, tostring, function() SpeedF.Update() end)
+addStepper(pMove, "Tốc độ chạy", "speedVal", 16, 5000, 4, tostring, function() SpeedF.Update() end)
 
 addToggle(pMove, "🦘", "Jump (nhảy cao)", "jumpOn", humApply("Jump", JumpF))
 addStepper(pMove, "Sức nhảy", "jumpVal", 50, 250, 10, tostring, function() JumpF.Update() end)
@@ -1971,7 +1971,7 @@ addToggle(pMove, "🕊", "Fly (bay)", "fly", function(on)
 		say("Fly OFF")
 	end
 end)
-addStepper(pMove, "Tốc độ bay", "flySpeed", 20, 200, 10, tostring, function() end)
+addStepper(pMove, "Tốc độ bay", "flySpeed", 20, 2000, 10, tostring, function() end)
 note(pMove, "Fly: PC dùng Space (lên) / Ctrl (xuống). Điện thoại: bay theo hướng camera, nhìn lên/xuống để đổi độ cao.")
 
 addToggle(pMove, "🏃", "Auto né quái (giữ khoảng cách)", "autoDodge", function(on)
